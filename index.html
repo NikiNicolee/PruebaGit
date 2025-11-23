@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>ESTO ES UNA PRUEBA</h1>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">MyWeb</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- SECTIONS -->
+    <section id="home" class="section">
+        <h1>Welcome to My Web Page</h1>
+        <p>This is the home section.</p>
+    </section>
+
+    <section id="about" class="section">
+        <h1>About Us</h1>
+        <p>We are a company dedicated to providing the best services.</p>
+    </section>
+
+    <section id="pricing" class="section">
+        <h1>Pricing</h1>
+        <p>Choose the plan that fits you best.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h1>Contact Us</h1>
+        <button id="contactButton">Say Hello!</button>
+        <p id="message"></p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
