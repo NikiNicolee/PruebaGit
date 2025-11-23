@@ -1,45 +1,213 @@
-body {
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* NAVBAR */
+body {
+    font-family: "Arial", sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 15px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px;
-    background-color: #333;
-    color: white;
+    z-index: 1000;
 }
 
 .navbar .logo {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-.nav-links li a {
+.nav-links a {
     color: white;
     text-decoration: none;
     font-size: 18px;
 }
 
-.nav-links li a:hover {
-    color: #00aaff;
+.nav-links a:hover {
+    color: #00b7ff;
 }
 
-/* SECTIONS */
+/* ===========================
+   HERO SECTION
+=========================== */
+.hero {
+    height: 100vh;
+    background: url("https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1200&q=80")
+        center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* BOTÓN GENERAL */
+.btn {
+    background: #00b7ff;
+    color: white;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #008ecc;
+}
+
+/* ===========================
+   SECCIONES
+=========================== */
 .section {
-    padding: 80px 20px;
+    padding: 100px 40px;
     text-align: center;
 }
 
-.section:nth-child(even) {
-    background-color: #f2f2f2;
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+/* ===========================
+   PRECIOS
+=========================== */
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 22px;
+    color: #00aaff;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.card ul li {
+    margin: 8px 0;
+}
+
+.destacado {
+    background: #e9faff;
+    border: 2px solid #00b7ff;
+}
+
+/* ===========================
+   FORMULARIO DE CONTACTO
+=========================== */
+.contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+.footer {
+    background: #1a1a1a;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .pricing-cards {
+        flex-direction: column;
+        align-items: center;
+    }
 }
